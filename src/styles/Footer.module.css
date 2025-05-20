@@ -1,0 +1,104 @@
+.footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Top Section */
+.topSection {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+/* Branding */
+.branding h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: gold;
+}
+
+.tagline {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Quick Links */
+.links h3,
+.contact h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin: 5px 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.links a:hover {
+  color: gold;
+}
+
+/* Contact */
+.contact p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact a:hover {
+  color: gold;
+}
+
+/* Social Links */
+.socials {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+
+.socials a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.socials a:hover {
+  color: gold;
+}
+
+/* Bottom Section */
+.bottomSection {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}

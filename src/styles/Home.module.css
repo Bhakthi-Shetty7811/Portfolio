@@ -1,0 +1,85 @@
+/* Wrapper to manage full-page layout */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* Centering the content while maintaining spacing */
+.container {
+  padding: 40px 50px;
+  border-radius: 16px;
+  margin: 40vh auto;
+  text-align: center;
+  max-width: 95%;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  position: relative;
+}
+
+.container:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Hero Text */
+.heroText {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+/* Elegant Underline */
+.heroText::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffcc00, #ff007f, #00d4ff);
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  opacity: 0.85;
+}
+
+/* Subtle Glow on Hover */
+.heroText:hover {
+  text-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8),
+               0px 0px 20px rgba(255, 0, 127, 0.7),
+               0px 0px 25px rgba(0, 212, 255, 0.7);
+}
+
+.heroText:hover::after {
+  width: 160px;
+  opacity: 1;
+}
+
+/* Cursive Text */
+.cursiveText {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  text-transform: lowercase;
+  font-weight: 600;
+  color: #f8f8f8;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Cursive Text */
+.cursiveText:hover {
+  color: #ffd700;
+  text-shadow: 0px 0px 12px rgba(255, 215, 0, 0.8),
+               0px 0px 18px rgba(255, 165, 0, 0.7),
+               0px 0px 24px rgba(255, 105, 180, 0.6);
+}

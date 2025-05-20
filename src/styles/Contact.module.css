@@ -1,0 +1,123 @@
+.container {
+  margin: 150px auto;
+  background: rgba(255, 255, 255, 0.08); /* Subtle glass effect */
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Soft glow */
+  backdrop-filter: blur(15px);
+  text-align: center;
+  max-width: 50%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  /* Elegant hover effect */
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+  }
+}
+
+/* Smooth Page Layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading */
+.heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color:#FFff; /* Gold */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #ffd700;
+  display: inline-block;
+  padding-bottom: 8px;
+  transition: all 0.3s ease-in-out;
+
+  /* Smooth Glow on Hover */
+  &:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+  }
+}
+
+/* Form */
+.form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Elegant Inputs */
+.form input, .form textarea {
+  margin: 12px 0;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3px 8px rgba(255, 215, 0, 0.2);
+}
+
+/* Input Focus Effect */
+.form input:focus, .form textarea:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* Button */
+.form button {
+  padding: 12px;
+  background: linear-gradient(45deg, #FFD700, #FFB800);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Button Hover */
+.form button:hover {
+  background: linear-gradient(45deg, #FFB800, #FFD700);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5);
+}
+
+/* Footer */
+.footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+

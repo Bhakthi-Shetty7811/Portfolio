@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("/backgrounds/space-bg(1).gif") no-repeat center center/cover;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glowing Name Effect */
+.glowing-name {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+  100% { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+}
+
+/* Tagline Animation */
+.tagline {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ccc;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cosmic Clock */
+.clock {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Enter Button */
+.enterButton {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff0077, #7700ff);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+}
+
+.enterButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 1);
+}
+
+/* Shooting Stars */
+.shootingStars::before,
+.shootingStars::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  background: white;
+  opacity: 0.8;
+  animation: shootingStar 2s infinite;
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(300px, 300px);
+    opacity: 0;
+  }
+}
+
+/* Background Board */
+.textBoard {
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark board */
+  padding: 30px 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  text-align: center;
+  max-width: 80%;
+}
+
+/* Ensure Text is Above the Board */
+.glowing-name, .tagline, .clock, .enterButton {
+  position: relative;
+  z-index: 1;
+}
+
+  

@@ -1,0 +1,91 @@
+.container {
+  max-width: 97%;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin: 150px auto; /* Removes height restrictions */
+  padding: 20px;
+  position: relative; /* Ensures child elements like .star are properly positioned */
+  z-index: 1; /* Keeps the container below cursor elements */
+}
+
+
+.heading {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #f8f8f8;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  padding-bottom: 12px;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+
+  /* Centering */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: fit-content;  /* Keeps it as small as the text */
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Underline */
+  border-bottom: 4px solid #ffbf00;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.star {
+  display: block !important;
+  opacity: 1 !important;
+  z-index: 99999 !important;
+}
+
+/* Animated Cursor Fix */
+.cursorContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1000; /* Keeps cursor visible */
+}
+
+/* Custom Cursor */
+.customCursor {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Ensures cursor is above everything */
+}
+
+/* Animated Stars */
+.star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(237, 206, 9);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  opacity: 0.8;
+  mix-blend-mode: difference;
+  z-index: 9998; /* Slightly below cursor */
+  pointer-events: none; /* Prevents stars from interfering with clicks */
+}

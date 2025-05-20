@@ -1,0 +1,140 @@
+/* Skills Container */
+.skillsContainer {
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin: 100px auto; /* Prevents unwanted horizontal scroll */
+  max-width: 97%;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  z-index: 1; /* Lower than cursor */
+}
+
+/* Heading */
+.heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #f8f8f8;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  border-bottom: 4px solid #ffbf00;
+  display: inline-block;
+  padding-bottom: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Skills Grid */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+/* Skill Category */
+.skillCategory {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skillCategory:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Skill Title */
+.skillTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Skills List */
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Individual Skill Box */
+.skillBox {
+  background: whitesmoke;
+  color: black;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.skillBox:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 191, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skillsGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Scrolling */
+.scrollable-content {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+/* Animated Cursor Fix */
+.cursorContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1000; /* Keeps cursor visible */
+}
+
+/* Custom Cursor */
+.customCursor {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Ensures cursor is above everything */
+}
+
+/* Animated Stars */
+.star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(237, 206, 9);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  opacity: 0.8;
+  mix-blend-mode: difference;
+  z-index: 9998; /* Slightly below cursor */
+  pointer-events: none; /* Prevents stars from interfering with clicks */
+}

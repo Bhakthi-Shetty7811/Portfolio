@@ -1,0 +1,166 @@
+.container {
+  max-width: 99%;
+  margin: 150px auto;
+  padding-left: 200px;
+  padding-right: 200px;
+  overflow-y:auto; /* Ensures cursor is not clipped */
+  max-height: none;  /* Removes height restrictions */
+  padding: 20px;
+  max-height: 65vh;
+  position: relative; /* Ensures child elements like .star are properly positioned */ /* Keeps the container below cursor elements */
+}
+
+/* Title Styling */
+/* Title Styling */
+.title {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #f8f8f8;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  padding-bottom: 12px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth text transitions */
+
+  /* Centering */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: fit-content; /* Keeps it as small as the text */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Underline Effect */
+  border-bottom: 4px solid #ffbf00;
+  overflow: hidden;
+}
+
+.title:hover {
+  color: #ffd700; /* Slightly brighter gold on hover */
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Underline Animation */
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0%;
+  height: 4px;
+  background-color: #ffd700;
+  transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+.title:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+
+/* Grid Layout */
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted column size */
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Certificate Card */
+.certCard {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3));
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  min-height: 180px; /* Restrict excessive height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hover Effect */
+.certCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+.certCard::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: #6ec1e4;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.certCard:hover::before {
+  height: 100%;
+  background: rgba(255, 204, 0, 0.2);
+}
+
+/* Text inside cards */
+.certCard h2 {
+  font-size: 1.5rem;
+  color: #ffbf00;
+  margin-bottom: 10px;
+}
+
+.certCard p {
+  color: #ddd;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animated Cursor Fix */
+.cursorContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1000; /* Keeps cursor visible */
+}
+
+/* Custom Cursor */
+.customCursor {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Ensures cursor is above everything */
+}
+
+/* Animated Stars */
+.star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #ffbf00;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  opacity: 0.8;
+  mix-blend-mode: difference;
+  z-index: 9998; /* Slightly below cursor */
+  pointer-events: none; /* Prevents stars from interfering with clicks */
+}
+
