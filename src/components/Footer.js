@@ -1,6 +1,7 @@
 "use client";
 import styles from "@/styles/Footer.module.css";
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,19 +14,19 @@ export default function Footer() {
           {/* Left: Branding */}
           <div className={styles.branding}>
             <h2>Bhakthi Shetty 💫</h2>
-            <p className={styles.tagline}>"Turning ideas into elegant solutions"</p>
+            <p className={styles.tagline}>&quot;Turning ideas into elegant solutions&quot;</p>
           </div>
 
           {/* Center: Quick Links */}
           <div className={styles.links}>
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="/">🏠 Home</a></li>
-              <li><a href="/about">👩‍💻 About</a></li>
-              <li><a href="/projects">🚀 Projects</a></li>
-              <li><a href="/skills">🛠 Skills</a></li>
-              <li><a href="/certificates">📜 Certificates</a></li>
-              <li><a href="/contact">📬 Contact</a></li>
+              <li><Link href="/">🏠 Home</Link></li>
+              <li><Link href="/about">👩‍💻 About</Link></li>
+              <li><Link href="/projects">🚀 Projects</Link></li>
+              <li><Link href="/skills">🛠 Skills</Link></li>
+              <li><Link href="/certificates">📜 Certificates</Link></li>
+              <li><Link href="/contact">📬 Contact</Link></li>
             </ul>
           </div>
 
