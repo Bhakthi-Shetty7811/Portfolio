@@ -11,7 +11,7 @@ export default function About() {
       <div className={styles.content}>
         <h1 className={styles.heading}>About Me</h1>
         <p className={styles.intro}>
-          Hi, I'm <span className={styles.highlight}>Bhakthi</span>, a space-loving tech enthusiast who enjoys creating unique digital experiences.
+          Hi, I&apos;m <span className={styles.highlight}>Bhakthi</span>, a space-loving tech enthusiast who enjoys creating unique digital experiences.
           I blend creativity with code to build futuristic applications.
         </p>
 
